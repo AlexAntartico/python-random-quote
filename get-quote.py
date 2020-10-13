@@ -1,8 +1,5 @@
 import random
 
-last = 13
-rnd = random.randint(0, last)
-
 def primary():
 
 
@@ -10,7 +7,8 @@ def primary():
   quotes = f.readlines()
   f.close()
 
-  print(quotes[rnd])
-
-if __name__== "__main__":
+  first_random_item, second_random_item = random.sample(quotes, 2)
+  print (first_random_item, second_random_item,sep="",end="")
+  #print (second_random_item,end="")
+if __name__== "__main__": 
   primary()
